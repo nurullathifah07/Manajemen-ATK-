@@ -59,6 +59,7 @@
                 <th>ATK</th>
                 <th>Jumlah</th>
                 <th>Tanggal</th>
+                <th>Aksi</th>
             </tr>
             </thead>
 
@@ -98,7 +99,7 @@
     const ctx = document.getElementById('atkChart');
 
     new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun'],
             datasets: [{

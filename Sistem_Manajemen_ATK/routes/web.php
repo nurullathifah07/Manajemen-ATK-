@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AkunController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,3 +21,5 @@ Route::get('/register', function () {
 //Admin
 Route::get('/admin/beranda', [AdminController::class, 'beranda'])->name('admin.beranda');
 
+
+Route::get('/admin/akun', [AkunController::class, 'akun'])->name('admin.akun');

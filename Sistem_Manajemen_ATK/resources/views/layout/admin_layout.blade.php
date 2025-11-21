@@ -31,32 +31,41 @@
 <div class="d-flex">
 
     <!-- SIDEBAR -->
-    <div class="bg-dark text-white sidebar p-3">
+    <div class="bg-secondary text-white sidebar p-3">
         <h4 class="text-center mb-4">ATK BPS Banjar</h4>
 
         <ul class="nav flex-column">
 
             <li class="nav-item mb-2">
-                <a href="/admin/dashboard" class="nav-link text-white active">
-                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                <a href="/admin/beranda"
+                class="nav-link text-white {{ request()->is('admin/beranda') ? 'active' : '' }}">
+                <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                 </a>
+            </li>
+
+            <li class="nav-item mb-2">
+                <a href="/admin/akun"
+                class="nav-link text-white {{ request()->is('admin/akun') ? 'active' : '' }}">
+                    <i class="bi bi-grid me-2"></i> Akun
+                </a>
+            </li>
+
+            <li class="nav-item mb-2">
+                <a href="#"
+                class="nav-link text-white {{ request()->is('admin/barang') ? 'active' : '' }}">
+                    <i class="bi bi-box-seam me-2"></i> Stok Barang
                 </a>
             </li>
 
             <li class="nav-item mb-2">
                 <a href="#" class="nav-link text-white">
-                    <i class="bi bi-box-seam me-2"></i> Stok ATK
+                    <i class="bi bi-cart-plus me-2"></i> Barang Masuk
                 </a>
             </li>
 
             <li class="nav-item mb-2">
                 <a href="#" class="nav-link text-white">
-                    <i class="bi bi-cart-plus me-2"></i> Pengambilan ATK
-                </a>
-            </li>
-
-            <li class="nav-item mb-2">
-                <a href="#" class="nav-link text-white">
-                    <i class="bi bi-people me-2"></i> Data Pegawai
+                    <i class="bi bi-file-earmark-minus me-2"></i> Barang Keluar
                 </a>
             </li>
 
@@ -75,6 +84,9 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
             <form class="d-flex me-auto" style="width: 300px;">
+                <span class="input-group-text bg-white">
+                    <i class="bi bi-search"></i>
+                </span>
                 <input class="form-control" type="search" placeholder="Cari..." aria-label="Search">
             </form>
 
